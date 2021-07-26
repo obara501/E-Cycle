@@ -1,0 +1,11 @@
+.card{
+    padding: 1.5rem;
+    border-radius: .7rem;
+    box-shadow: .6rem .6rem 7rem 0 rgba($color-grey, .8);
+    transition: all .3s;
+    cursor: pointer;
+
+    &:hover{
+        transform: translateY(-1rem);
+    }
+}

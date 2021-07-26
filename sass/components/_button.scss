@@ -1,0 +1,46 @@
+.btn {
+    font-size: $font-size-medium;
+    font-weight: 500;
+    border: none;
+    border-radius: .6rem;
+    padding: .8rem 3rem;
+    transition: all .3s;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+
+    &:hover{
+        cursor: pointer;
+        transform: translateY(-.5rem);
+    }
+    &:active{
+        transform: translateY(-.2rem);
+    }
+    
+    
+
+    &-grey{
+        background-color: $primary-color;
+        color: $secondary-color;
+
+        &:hover{
+            color: $primary-color;
+            background-color: $secondary-color;
+        }
+    }
+    &-bage{
+        color: $primary-color;
+        background-color: $secondary-color;
+
+        &:hover{
+        background-color: $primary-color;
+        color: $secondary-color;
+        }
+    }
+    &-shop{
+        background-color: $secondary-color;
+        padding: 1.2rem 6.5rem;
+        font-size: $font-size-medium;
+        font-weight: 600;
+    }
+
+}
