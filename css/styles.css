@@ -18,17 +18,27 @@ body {
   line-height: 1.7;
   color: #777;
   box-sizing: border-box;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a:link,
-a:active, a:visited {
+a:active,
+a:visited {
   text-decoration: none;
   font-size: 1.6rem;
   color: #405E76;
   font-weight: 400;
 }
 a:link:hover,
-a:active:hover, a:visited:hover {
+a:active:hover,
+a:visited:hover {
   cursor: pointer;
 }
 
@@ -262,6 +272,7 @@ a.link:hover {
 .header {
   min-height: 100vh;
   position: relative;
+  background-image: linear-gradient(to right, rgba(119, 119, 119, 0.3), rgba(119, 119, 119, 0.25));
 }
 .header__background {
   position: absolute;
@@ -347,9 +358,6 @@ a.link:hover {
   transition: all 0.3s;
   cursor: pointer;
 }
-.section-about__img:hover {
-  transform: translateY(-1rem);
-}
 .section-about__img img {
   height: 100%;
 }
@@ -371,7 +379,7 @@ a.link:hover {
 
 /*****  RIDES SECTION *****/
 .section-ride {
-  min-height: 70vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
 }
@@ -530,8 +538,9 @@ a.link:hover {
 
 /*****  CONTACT SECTION *****/
 .section-contact {
-  min-height: 70vh;
+  min-height: 50vh;
   background-color: #DFC47F;
+  padding-bottom: 2.5rem;
 }
 .section-contact__wrapper {
   padding: 0 10rem;
@@ -717,6 +726,206 @@ a.link:hover {
 }
 .section-footer--copyright {
   text-align: center;
+}
+
+/*****  MEDIA QUERIES *****/
+/*****  LAPTOP *****/
+@media (max-width: 90em) {
+  html {
+    font-size: 46%;
+  }
+
+  /* ABOUT SECTION MEDIA QUERY*/
+  .section-about__img {
+    height: 80vh;
+  }
+
+  /* RIDE SECTION MEDIA QUERY*/
+  .section-ride [class^=card] > img {
+    background-color: red;
+    height: 34vh;
+  }
+
+  /* SHOP SECTION MEDIA QUERY*/
+  .section-shop .splide + div {
+    margin-top: 0 !important;
+  }
+
+  /* TESTIMONIALS SECTION MEDIA QUERY*/
+  /* CONTACT SECTION MEDIA QUERY*/
+  /* FOOTER SECTION MEDIA QUERY*/
+}
+/*****  TABLET MEDIA QUERIES *****/
+@media (max-width: 48em) {
+  html {
+    font-size: 30%;
+  }
+
+  /* HEADER SECTION MEDIA QUERY*/
+  .header {
+    min-height: 70vh;
+  }
+  .header .banner {
+    display: none;
+  }
+
+  /* ABOUT SECTION MEDIA QUERY*/
+  .section-about__img {
+    height: 50vh;
+  }
+  .section-about__svg {
+    margin-bottom: -11rem;
+  }
+
+  /* RIDE SECTION MEDIA QUERY*/
+  .section-ride--wrapper {
+    padding: 0 10rem;
+  }
+  .section-ride [class^=card] > img {
+    height: 20vh;
+  }
+  .section-ride .card-5 {
+    display: none;
+  }
+
+  /* SHOP SECTION MEDIA QUERY*/
+  .section-shop {
+    min-height: 75vh;
+  }
+  .section-shop .splide + div {
+    margin-top: 4rem !important;
+  }
+
+  /* TESTIMONIALS SECTION MEDIA QUERY*/
+  /* CONTACT SECTION MEDIA QUERY*/
+  .section-contact .left,
+.section-contact .center,
+.section-contact .right {
+    padding: 0rem;
+  }
+  .section-contact .center {
+    padding: 15rem 5rem;
+  }
+
+  /* FOOTER SECTION MEDIA QUERY*/
+  .section-footer {
+    padding: 5rem 10rem;
+  }
+}
+@media (max-width: 37.5em) {
+  html {
+    font-size: 28%;
+  }
+
+  /* HEADER SECTION MEDIA QUERY*/
+  .header {
+    min-height: 60vh;
+  }
+  .header__nav {
+    padding-right: 0;
+  }
+
+  /* ABOUT SECTION MEDIA QUERY*/
+  .section-about {
+    min-height: 45vh;
+  }
+  .section-about__content {
+    padding: 5rem;
+  }
+  .section-about__svg {
+    margin-bottom: -4rem;
+  }
+
+  /* RIDE SECTION MEDIA QUERY*/
+  .section-ride {
+    min-height: 50vh;
+  }
+  .section-ride--wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: -4rem;
+  }
+  .section-ride .left,
+.section-ride .right {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .section-ride .left [class^=card],
+.section-ride .right [class^=card] {
+    transform: translateY(0);
+  }
+  .section-ride .left [class^=card]:hover,
+.section-ride .right [class^=card]:hover {
+    transform: translateY(0);
+  }
+  .section-ride .left .paragraph,
+.section-ride .right .paragraph {
+    width: 80%;
+  }
+  .section-ride .left .paragraph {
+    order: 2;
+  }
+  .section-ride .left-images {
+    order: 1;
+    margin-bottom: 3.5rem;
+  }
+  .section-ride [class^=card] {
+    transform: translateY(0);
+  }
+  .section-ride .left-images {
+    order: 1;
+    padding: 5rem;
+  }
+  .section-ride [class^=card] > img {
+    height: 20vh;
+  }
+  .section-ride .card-2,
+.section-ride .card-4 {
+    display: none;
+  }
+
+  /* SHOP SECTION MEDIA QUERY*/
+  .section-shop {
+    min-height: 55vh;
+  }
+
+  /* TESTIMONIALS SECTION MEDIA QUERY*/
+  /* CONTACT SECTION MEDIA QUERY*/
+  .section-contact__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-contact .left,
+.section-contact .center,
+.section-contact .right {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section-contact .center {
+    padding: 10rem 0;
+  }
+  .section-contact .right {
+    margin-bottom: 5rem;
+  }
+
+  /* FOOTER SECTION MEDIA QUERY*/
+  .section-footer--wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section-footer .top {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-footer .top > *:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+  .section-footer .follow-us {
+    padding: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

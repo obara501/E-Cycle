@@ -56,7 +56,7 @@
           <li class="header__nav-link">
             <a href="#contact" class="">Login</a>
           </li>
-          <li class="header__nav-link">
+          <li class="header__nav-link" id="header__signup">
             <a href="#" class="btn btn-grey">Sign up</a>
             <div class="banner">
               <h4 class="heading-tertiary banner--heading">
@@ -174,7 +174,7 @@
               <ul class="splide__list">
                 <li class="splide__slide relative">
                   <div class="slideshow__slide">
-                    <img src="./assets/images/bike.jpg" alt="" />
+                    <img data-splide-lazy="./assets/images/bike.jpg" alt="" />
                     <div class="slideshow__slide--info">
                       <h2 class="heading-primary">Meet the hill Champion!</h2>
                       <p class="paragraph">
@@ -196,7 +196,7 @@
                 </li>
                 <li class="splide__slide relative">
                   <div class="slideshow__slide">
-                    <img src="./assets/images/bike4.jpg" alt="" />
+                    <img data-splide-lazy="./assets/images/bike4.jpg" alt="" />
                     <div class="slideshow__slide--info">
                       <h2 class="heading-primary">Meet the hill Champion!</h2>
                       <p class="paragraph">
@@ -218,7 +218,7 @@
                 </li>
                 <li class="splide__slide relative">
                   <div class="slideshow__slide">
-                    <img src="./assets/images/bike-3.jpg" alt="" />
+                    <img data-splide-lazy="./assets/images/bike-3.jpg" alt="" />
                     <div class="slideshow__slide--info">
                       <h2 class="heading-primary">Meet the hill Champion!</h2>
                       <p class="paragraph">
@@ -268,12 +268,42 @@
         <h2 class="heading-secondary heading-secondary--bage u-center-text">
           Hear from our satisfied customers!
         </h2>
-        <div class="slide">
-          <div id="#splide">
-            <div class="splide__slider quote ">
+        <!-- <div class="slide">
+          <div id="#splide" data-splide='{"speed": 1000 ,"perPage": 2}'>
+            <div class="splide__slider  ">
               <div class="splide__track">
                 <ul class="splide__list">
-                  <li class="splide__slide quote">
+                  <li class="splide__slide relative quote">
+                    <div class="slide__card ">
+                      <div class="splide__slide__container slide__image">
+                        <img src="./assets/images/bike.jpg" alt="" srcset="">
+                      </div>
+                      <div class="slide__content">
+                        <p class="paragraph">I have never gotten to work late ever since
+                          i got an E-Cycle. Very convenient and efficient!</p>
+                          <h4 class="heading-tertiary">
+                            Jeffrey Kerengo
+                            <span>Web Developer</span>
+                          </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide relative quote">
+                    <div class="slide__card">
+                      <div class="splide__slide__container slide__image">
+                        <img src="" alt="" srcset="">
+                      </div>
+                      <div class="slide__content">
+                        <p class="paragraph">I have never gotten to work late ever since
+                          i got an E-Cycle. Very convenient and efficient!</p>
+                          <h4 class="heading-tertiary">
+                            Jeffrey Kerengo
+                            <span>Web Developer</span>
+                          </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide relative quote">
                     <div class="slide__card">
                       <div class="splide__slide__container slide__image">
                         <img src="" alt="" srcset="">
@@ -335,9 +365,12 @@
                   </li> -->
                 </ul>
               </div>
+              <div class="splide__autoplay">
+                <div class="splide__progress__bar"></div>
+              </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="section-testimonials__svg--bottom">
           <svg
             width="auto"

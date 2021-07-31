@@ -2,6 +2,8 @@
 .header {
     min-height: 100vh;
     position: relative;
+    background-image: linear-gradient(to right, rgba($color-grey, .3), rgba($color-grey, .25));
+
 
     &__background {
         position: absolute;
@@ -16,6 +18,7 @@
             height: 100%;
             width: 100%;
             object-fit: cover;
+
         }
     }
 
@@ -60,22 +63,24 @@
 
         &-link:last-child {
             margin: 0 5rem 0 10rem;
-            position :relative;
+            position: relative;
 
 
             a {
                 text-decoration: none;
                 color: $secondary-color;
-                &:hover{
+
+                &:hover {
                     color: $primary-color;
                 }
-                &:hover + .banner{
+
+                &:hover+.banner {
                     transform: translateY(0);
                     opacity: 1;
-            }
-
                 }
+
             }
+        }
     }
 
     &__content {
@@ -103,10 +108,6 @@
         box-shadow: .6rem .6rem 7rem 0 rgba($color-grey, .8);
         transition: all .3s;
         cursor: pointer;
-
-        &:hover {
-            transform: translateY(-1rem);
-        }
 
         img {
             height: 100%;
@@ -136,7 +137,7 @@
 
 /*****  RIDES SECTION *****/
 .section-ride {
-    min-height: 70vh;
+    min-height: 50vh;
     @include flex-column;
 
     &--wrapper {
@@ -223,7 +224,7 @@
 }
 
 /*****  SHOP SECTION *****/
-.section-shop{
+.section-shop {
     min-height: 100vh;
 
     h2 {
@@ -235,27 +236,29 @@
         }
     }
 
-    .slideshow{
+    .slideshow {
         padding: 0 10rem;
 
-        .relative{
+        .relative {
             position: relative;
             height: 65rem;
-            
+
 
         }
-        &__slide{
+
+        &__slide {
             height: 100%;
             width: 100%;
             position: relative;
 
-            img{
+            img {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
 
             }
-            &--info{
+
+            &--info {
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -263,49 +266,54 @@
                 left: 0;
                 color: $color-white;
                 background: linear-gradient(to right, rgba($primary-color, .4), rgba($primary-color, .6));
-                padding:30rem 0 0 10rem;
-                padding-bottom:100%;
+                padding: 30rem 0 0 10rem;
+                padding-bottom: 100%;
 
-                h2{
-                 font-size: $heading-huge;   
+                h2 {
+                    font-size: $heading-huge;
                 }
 
-                p{
+                p {
                     font-size: $font-size-large;
                 }
             }
-            &-button{
+
+            &-button {
                 background-color: transparent;
-                border-bottom:2px solid $secondary-color;
+                border-bottom: 2px solid $secondary-color;
                 border-radius: 0;
                 font-size: $font-size-large;
 
-                &:hover{
+                &:hover {
                     color: $secondary-color;
-                    background-color:$secondary-color;
+                    background-color: $secondary-color;
                     color: $primary-color;
-                    border-bottom:2px solid $secondary-color;
+                    border-bottom: 2px solid $secondary-color;
                     border-radius: 5px;
                 }
             }
 
         }
-        .btn-shop{
+
+        .btn-shop {
             padding: 1.2rem 3rem;
             background-color: transparent;
-            border-bottom:2px solid $secondary-color;
+            border-bottom: 2px solid $secondary-color;
             border-radius: 0;
-            &:hover{
-                border-bottom:2px solid $secondary-color;
+
+            &:hover {
+                border-bottom: 2px solid $secondary-color;
 
             }
         }
 
     }
 }
+
 /*****  TESTIMONIALS SECTION *****/
 .section-testimonials {
     min-height: 100vh;
+
     &__svg {
         &--top {
             margin-bottom: -.5rem;
@@ -322,6 +330,7 @@
             font-size: 10rem;
         }
     }
+
     // &__content {
     //     height: 55rem;
     //     @include flex-row-justify-space-evenly;
@@ -338,21 +347,22 @@
     //         background-color: $color-white;
     //     }
     // }
-   
+
 
 }
 
 /*****  CONTACT SECTION *****/
 .section-contact {
-    min-height: 70vh;
+    min-height: 50vh;
     background-color: $secondary-color;
+    padding-bottom: 2.5rem;
 
     &__wrapper {
         padding: 0 10rem;
         @include flex-row;
         height: inherit;
     }
-    
+
     .left,
     .center,
     .right {
@@ -408,10 +418,11 @@
                 resize: none;
             }
         }
+
         input[type="submit"] {
             border: 2px solid transparent;
 
-            &:hover{
+            &:hover {
                 border: 2px solid $primary-color;
             }
         }
@@ -419,88 +430,87 @@
 
     .center {
         padding: 15rem 20rem;
-        
-        .contact__details{
+
+        .contact__details {
             @include flex-column;
 
-            & > *:not(:last-child){
+            &>*:not(:last-child) {
                 margin-bottom: 4rem;
             }
 
             &--tel,
             &--email,
-            &--location{
+            &--location {
                 @include flex-row;
                 align-items: flex-start;
 
-                & > *:not(:last-child){
+                &>*:not(:last-child) {
                     margin-right: 1rem;
                 }
 
-                a{
+                a {
                     font-size: $font-size-medium;
 
 
-                    &:hover{
+                    &:hover {
                         text-decoration: underline;
                         cursor: pointer;
                     }
                 }
-                &:hover{
-                    cursor:pointer;
+
+                &:hover {
+                    cursor: pointer;
                 }
             }
+
             .icon-tel,
             .icon-email,
-            .icon-location{
+            .icon-location {
                 font-size: 3.5em;
                 width: 4rem;
                 color: $primary-color;
             }
 
-            .icon-tel{
-            }
-            .icon-email{
+            .icon-tel {}
 
-            }
-            .icon-location{
+            .icon-email {}
 
-            }
-            &--tel{
+            .icon-location {}
 
-            }
-            &--email{
+            &--tel {}
 
-            }
-            &--location{
+            &--email {}
 
-            }
+            &--location {}
         }
     }
 
     .right {
         flex-grow: 1;
 
-        .contact__location{
+        .contact__location {
             @include flex-column;
 
-            &--heading{
-            font-size: $heading-large;
-            color: $primary-color;
+            &--heading {
+                font-size: $heading-large;
+                color: $primary-color;
             }
-            &--map{
-                overflow:hidden;
-                padding-bottom:100%;
-                position:relative;
-                iframe{
-                    left:0;
-                    top:0;
-                    height:100%;
-                    width:100%;
-                    position:absolute;
+
+            &--map {
+                overflow: hidden;
+                padding-bottom: 100%;
+                position: relative;
+
+                iframe {
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
                 }
             }
-            .card:hover{
+
+            .card:hover {
                 transform: translate(0);
             }
 
@@ -509,77 +519,334 @@
 }
 
 /*****  FOOTER SECTION *****/
-.section-footer{
-    min-height:30vh;
+.section-footer {
+    min-height: 30vh;
     background-color: $primary-color;
     padding: 1rem 10rem;
 
-    &--wrapper{
+    &--wrapper {
         width: 100%;
     }
-    .top{
+
+    .top {
         @include flex-row;
         justify-content: space-between;
         border-bottom: 2px solid $secondary-color;
 
     }
-    .newsletter{
+
+    .newsletter {
         flex: .4;
 
-        &-content{
+        &-content {
             color: $secondary-color;
         }
-        &-form{
+
+        &-form {
             @include flex-row;
             align-items: center;
-            input{
+
+            input {
                 padding: 1rem 2rem;
                 font-size: $font-size-medium;
                 outline: none;
                 min-width: 50rem;
                 border: none;
             }
-            button{
-                background-color:rgba($secondary-color, .8);
+
+            button {
+                background-color: rgba($secondary-color, .8);
                 border-radius: 0;
                 padding: 1rem 2rem;
 
-                &:hover{
-                    background-color:rgba($secondary-color, 1);
-                    color:$primary-color;
+                &:hover {
+                    background-color: rgba($secondary-color, 1);
+                    color: $primary-color;
                     transform: translate(0);
                 }
             }
         }
     }
-    .follow-us{
+
+    .follow-us {
         flex: .3;
         padding-left: 25rem;
-        .footer-nav{
+
+        .footer-nav {
             text-align: left;
         }
-        & > i{
+
+        &>i {
             font-size: 2.5em;
             color: $secondary-color;
 
-            &:hover{
+            &:hover {
                 cursor: pointer;
             }
         }
-        & > i:not(:last-child){
+
+        &>i:not(:last-child) {
             margin-right: 3rem;
         }
-        
+
     }
-    .footer-nav{
+
+    .footer-nav {
         flex: .3;
 
-        a{
+        a {
             @include flex-column;
             font-weight: 400;
         }
     }
-    &--copyright{
+
+    &--copyright {
         text-align: center;
+    }
+}
+
+/*****  MEDIA QUERIES *****/
+/*****  LAPTOP *****/
+
+@media (max-width: 90em) {
+
+    // 1440px
+    html {
+        font-size: 46%;
+    }
+
+    /* ABOUT SECTION MEDIA QUERY*/
+    .section-about {
+        &__img {
+            height: 80vh;
+        }
+    }
+
+    /* RIDE SECTION MEDIA QUERY*/
+    .section-ride {
+        [class^="card"]>img {
+            background-color: red;
+            height: 34vh;
+        }
+    }
+
+    /* SHOP SECTION MEDIA QUERY*/
+
+    .section-shop {
+        .splide+div {
+            margin-top: 0 !important;
+        }
+    }
+
+    /* TESTIMONIALS SECTION MEDIA QUERY*/
+    /* CONTACT SECTION MEDIA QUERY*/
+    /* FOOTER SECTION MEDIA QUERY*/
+
+
+}
+
+/*****  TABLET MEDIA QUERIES *****/
+
+@media (max-width: 48em) {
+
+    // 768px
+    html {
+        font-size: 30%;
+    }
+
+    /* HEADER SECTION MEDIA QUERY*/
+
+    .header {
+        min-height: 70vh;
+
+        .banner {
+            display: none;
+        }
+    }
+
+    /* ABOUT SECTION MEDIA QUERY*/
+
+    .section-about {
+        &__img {
+            height: 50vh;
+        }
+
+        &__svg {
+            margin-bottom: -11rem;
+        }
+    }
+
+    /* RIDE SECTION MEDIA QUERY*/
+
+    .section-ride {
+        &--wrapper {
+            padding: 0 10rem;
+        }
+
+        [class^="card"]>img {
+            height: 20vh;
+        }
+
+        .card-5 {
+            display: none;
+        }
+    }
+
+    /* SHOP SECTION MEDIA QUERY*/
+    .section-shop {
+        min-height: 75vh;
+
+        .splide+div {
+            margin-top: 4rem !important;
+        }
+    }
+
+    /* TESTIMONIALS SECTION MEDIA QUERY*/
+    /* CONTACT SECTION MEDIA QUERY*/
+
+    .section-contact {
+
+        .left,
+        .center,
+        .right {
+            padding: 0rem;
+        }
+
+        .center {
+            padding: 15rem 5rem;
+        }
+    }
+
+    /* FOOTER SECTION MEDIA QUERY*/
+    .section-footer {
+        padding: 5rem 10rem;
+    }
+
+}
+
+@media (max-width: 37.5em) {
+    // 600px
+
+    html {
+        font-size: 28%;
+    }
+
+    /* HEADER SECTION MEDIA QUERY*/
+
+    .header {
+        min-height: 60vh;
+
+        &__nav {
+            padding-right: 0;
+        }
+    }
+
+    /* ABOUT SECTION MEDIA QUERY*/
+    .section-about {
+        min-height: 45vh;
+
+        &__content {
+            padding: 5rem;
+        }
+        &__svg{
+            margin-bottom: -4rem;
+        }
+    }
+
+    /* RIDE SECTION MEDIA QUERY*/
+
+    .section-ride {
+        min-height: 50vh;
+
+        &--wrapper{
+            @include flex-column;
+            margin-top: -4rem;
+        }
+        .left,
+        .right{
+            @include flex-column;
+            padding: 0;
+
+            [class^="card"]{
+                transform: translateY(0);
+                &:hover{
+                    transform: translateY(0);
+
+                }
+            }
+            .paragraph{
+                width: 80%;
+            }
+        }
+        .left{
+
+            .paragraph{
+                order: 2;
+            }
+            &-images{
+                order: 1;
+                margin-bottom: 3.5rem;
+            }
+        }
+        [class^="card"]{
+            transform: translateY(0);
+        }
+        
+        .left-images{
+            order: 1;
+            padding: 5rem;
+        }
+        [class^="card"]>img {
+            height: 20vh;
+        }
+
+        .card-2,
+        .card-4 {
+            display: none;
+        }
+    }
+
+    /* SHOP SECTION MEDIA QUERY*/
+    .section-shop{
+        min-height: 55vh;
+    }
+    /* TESTIMONIALS SECTION MEDIA QUERY*/
+    /* CONTACT SECTION MEDIA QUERY*/
+    .section-contact{
+        &__wrapper{
+            @include flex-column;
+        }
+        .left,
+        .center,
+        .right{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .center{
+            padding: 10rem 0;
+        }
+        .right{
+            margin-bottom: 5rem;
+        }
+    }
+
+    /* FOOTER SECTION MEDIA QUERY*/
+    .section-footer{
+
+        &--wrapper{
+            @include flex-column;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .top{
+            @include flex-column;
+            
+            & > *:not(:last-child){
+                margin-bottom: 5rem;
+            }
+        }
+        .follow-us{
+            padding: 0;
+        }
     }
 }

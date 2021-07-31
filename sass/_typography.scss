@@ -4,68 +4,78 @@ body {
     line-height: 1.7;
     color: $color-grey;
     box-sizing: border-box;
-  }
 
- 
-  a:link,
-  a:active,a:visited{
-      text-decoration: none;
-      font-size: $default-font-size;
-      color: $primary-color;
-      font-weight: 400;
-      
-      &:hover{
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+a:link,
+a:active,
+a:visited {
+    text-decoration: none;
+    font-size: $default-font-size;
+    color: $primary-color;
+    font-weight: 400;
+
+    &:hover {
         cursor: pointer;
     }
-  }
-  a.link{
-      color: $secondary-color;
-      font-size: $default-font-size;
-      text-decoration: none;
+}
 
-      &:hover{
-          cursor: pointer;
-      }
-  }
+a.link {
+    color: $secondary-color;
+    font-size: $default-font-size;
+    text-decoration: none;
 
-  .heading-primary {
-      font-size: $heading-huge;
-      font-weight: 700;
+    &:hover {
+        cursor: pointer;
+    }
+}
 
-      &--white{
-          color: $color-white;
-      }
-  }
+.heading-primary {
+    font-size: $heading-huge;
+    font-weight: 700;
+
+    &--white {
+        color: $color-white;
+    }
+}
 
 
-  .heading-secondary{
-      font-size:3rem;
-      color: #000;
-      font-weight: 600;
+.heading-secondary {
+    font-size: 3rem;
+    color: #000;
+    font-weight: 600;
 
-      &--blue{
-          color: $primary-color;
-      }
+    &--blue {
+        color: $primary-color;
+    }
 
-      &--white{
-          color: $color-white;
-      }
-      &--bage{
-          color: $secondary-color;
-          background-color: $primary-color;
-      }
-  }
+    &--white {
+        color: $color-white;
+    }
 
-  .heading-tertiary{
-    font-size:2.5rem;
+    &--bage {
+        color: $secondary-color;
+        background-color: $primary-color;
+    }
+}
+
+.heading-tertiary {
+    font-size: 2.5rem;
     color: $secondary-color;
     font-weight: 500;
-  }
+}
 
-  .paragraph{
-     font-size: $default-font-size;
-     letter-spacing: .1rem;
-     line-height: 2;
-  }
-
-
+.paragraph {
+    font-size: $default-font-size;
+    letter-spacing: .1rem;
+    line-height: 2;
+}
