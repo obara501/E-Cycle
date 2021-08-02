@@ -1,0 +1,10 @@
+
+ .shop-content{margin: auto;width: 80%;padding-bottom: 100px; padding-top: 50px;}
+ .grid{display: flex;flex-wrap: wrap;flex-direction: row;}
+ .product-item{width: 33.3%;}
+ .item{padding: 10px;}
+ .product-description{padding-bottom: 10px;font-size: 0.7em;}
+ .product-right{width: 60%;}
+ .product-left{width: 40%;}
+ .product-left-inner{padding: 60px;}
+ .price .stock{font-size: 16px;}
