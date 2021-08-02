@@ -76,7 +76,7 @@
             Cycling just got easier!
           </h1>
         </div>
-        <button class="btn btn-bage btn-shop">Shop</button>
+        <a href="./products.php" class="btn btn-bage btn-shop">Shop</a>
       </div>
     </header>
     <main class="section-main">
@@ -246,7 +246,7 @@
             </div>
           </div>
           <div class="u-center-text u-margin-top-medium">
-            <button class="btn btn-bage btn-shop">Browse more &#8594;</button>
+            <a href="./products.php"><button class="btn btn-bage btn-shop">Browse more &#8594;</button></a>
           </div>
         </div>
       </section>
