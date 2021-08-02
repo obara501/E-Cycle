@@ -1,41 +1,46 @@
-<?php // SET THE HOST
-$host = 'localhost';
-$database = 'EliteHostels';
-$user = 'root';
-$userPassword = '';
-$connection = mysqli_connect( $host, $user, $userPassword, $database);
+<?php include('db.php'); ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>log in</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<a href="home.html">
+              <div class="logo">
+             <h1 class="logo-text">
+                <span class="logo-bage">E</span>-Cycle
+            </h1>
+         </div>
+         </a>
+        <form class="form" method="POST" action="login.php">
+        	<!-- Showing errors in log in -->
+            <?php include('errors.php'); ?>
+        	<div class=""> 
+                <div class="form-group">
+                    <input type="text" placeholder="Username" required="" name="username">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required="" name="password">
+                </div>
+                <div class="forget-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn" name="signin">LOGIN</button>
+                <div class="account">
+                    Dont have an account? <a href="register.php" id="signup">Signup</a>
+                </div>
+        </div>
+        </form> 
+		
+	</div>
 
-if($connection){
-echo "Connection to $database successful<br>";
-}else{
-echo "Error establishing connection to the database!<br> " . mysqli_connect_error($connection) ."<br>";
-}
-
-//  GET INPUT FROM THE FORM FIELDS
-$name = $_POST['name'];
-$password = $_POST['password'];
-
-// PERFORM QUERY SANITIZATION
-$name = mysqli_real_escape_string($connection, $name);
-$password = mysqli_real_escape_string($connection, $password);
-
-// CHECK FOR REGISTERED USER
-$searchUser = "SELECT * FROM tenants WHERE firstName='$name' AND pass= '$password'";
-
-$records = mysqli_query($connection, $searchUser);
-
-if(mysqli_num_rows($records) > 0){
-    
-    while($rows = mysqli_fetch_assoc($records)){
-        echo "ID : {$rows['id']}  <br>";
-        echo "First Name : {$rows['firstName']} <br>";
-        echo "Email : {$rows['email']}<br><br>";
-    }
-}else{
-    echo "No records found!";
-}
-
-
-
-mysqli_close($connection);
-?>
+</body>
+</html>
