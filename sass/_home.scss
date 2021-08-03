@@ -46,11 +46,11 @@
             flex-direction: row;
             align-items: center;
             list-style-type: none;
-
+            // overflow: hidden;
         }
 
 
-        &-link:not(:last-child) {
+        &-link:not(#header__signup) {
             padding: 0 6rem;
 
             a {
@@ -83,7 +83,7 @@
             }
         }
 
-        &-link:last-child {
+        &-link#header__signup {
             margin: 0 5rem 0 10rem;
             position: relative;
 
@@ -103,6 +103,13 @@
 
             }
         }
+
+        .nav{
+            .icon{
+                display: none;
+            }
+        }
+        
     }
 
     &__content {
@@ -865,10 +872,65 @@
     /* HEADER SECTION MEDIA QUERY*/
 
     .header {
-        min-height: 60vh;
+        min-height: 70vh;
 
         &__nav {
             padding-right: 0;
+        }
+        &__content{
+            // padding-bottom: 10rem;
+            // padding-top: 0;
+        }
+        .nav{
+            & > *:not(.icon,#header__signup,.login){
+                display: none;
+            }
+            #header__signup{
+                margin:0 5rem 0 1.5rem;
+            }
+            .icon{
+                display: block;
+                margin-right: 5rem;
+                font-size:3.5rem;
+                &:active .header__content{
+                    padding-bottom: 10rem;
+                }
+            }
+            &.responsive{
+
+
+                position: relative;
+                width:50%;
+                // height: 100%;
+                margin-bottom: -40rem;
+                @include flex-column;
+                align-items: flex-start;
+                border-radius: .5rem;
+                background-color: $color-white;
+                overflow: hidden;
+                & > *:not(.icon,#header__signup,.login){
+                    display: block;
+                }
+                li{
+
+                    list-style-type: none;
+                    padding: 3rem !important;
+
+                    width: 100%;
+
+                    align-items: center;
+                    justify-content: flex-start;
+                    text-align: center;
+                #header__signup{
+                    margin:0;
+                }
+                }
+                a.icon{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
         }
     }
 

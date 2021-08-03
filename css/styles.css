@@ -400,10 +400,10 @@ a.link:hover {
   align-items: center;
   list-style-type: none;
 }
-.header__nav-link:not(:last-child) {
+.header__nav-link:not(#header__signup) {
   padding: 0 6rem;
 }
-.header__nav-link:not(:last-child) a {
+.header__nav-link:not(#header__signup) a {
   font-size: 2rem;
   text-decoration: none;
   display: block;
@@ -411,7 +411,7 @@ a.link:hover {
   color: #405E76;
   position: relative;
 }
-.header__nav-link:not(:last-child) a::before {
+.header__nav-link:not(#header__signup) a::before {
   position: absolute;
   bottom: 0;
   content: "";
@@ -419,27 +419,30 @@ a.link:hover {
   height: 0.3rem;
   background-color: #405E76;
 }
-.header__nav-link:not(:last-child) .nav-ltr::before {
+.header__nav-link:not(#header__signup) .nav-ltr::before {
   width: 0%;
   bottom: 0.1rem;
 }
-.header__nav-link:not(:last-child) .nav-ltr:hover::before {
+.header__nav-link:not(#header__signup) .nav-ltr:hover::before {
   width: 100%;
 }
-.header__nav-link:last-child {
+.header__nav-link#header__signup {
   margin: 0 5rem 0 10rem;
   position: relative;
 }
-.header__nav-link:last-child a {
+.header__nav-link#header__signup a {
   text-decoration: none;
   color: #DFC47F;
 }
-.header__nav-link:last-child a:hover {
+.header__nav-link#header__signup a:hover {
   color: #405E76;
 }
-.header__nav-link:last-child a:hover + .banner {
+.header__nav-link#header__signup a:hover + .banner {
   transform: translateY(0);
   opacity: 1;
+}
+.header__nav .nav .icon {
+  display: none;
 }
 .header__content {
   padding: 20rem 0 0 10rem;
@@ -1034,10 +1037,54 @@ a.link:hover {
 
   /* HEADER SECTION MEDIA QUERY*/
   .header {
-    min-height: 60vh;
+    min-height: 70vh;
   }
   .header__nav {
     padding-right: 0;
+  }
+  .header .nav > *:not(.icon, #header__signup, .login) {
+    display: none;
+  }
+  .header .nav #header__signup {
+    margin: 0 5rem 0 1.5rem;
+  }
+  .header .nav .icon {
+    display: block;
+    margin-right: 5rem;
+    font-size: 3.5rem;
+  }
+  .header .nav .icon:active .header__content {
+    padding-bottom: 10rem;
+  }
+  .header .nav.responsive {
+    position: relative;
+    width: 50%;
+    margin-bottom: -40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  .header .nav.responsive > *:not(.icon, #header__signup, .login) {
+    display: block;
+  }
+  .header .nav.responsive li {
+    list-style-type: none;
+    padding: 3rem !important;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .header .nav.responsive li #header__signup {
+    margin: 0;
+  }
+  .header .nav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
   /* ABOUT SECTION MEDIA QUERY*/

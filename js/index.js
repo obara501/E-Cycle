@@ -15,32 +15,14 @@ for (let i = 0, len = elms.length; i < len; i++) {
   new Splide(elms[i]).mount();
 }
 
-/* DISCOUNT POPUP  */
-// $(document).ready(function() {
-// let i = 0;
-// $(document).on("mousewheel", function (e) {
-//   i++;
-//   console.log(i);
-//   if (i == 10) {
-//     $(".discount").addClass("active");
-//   }
-// });
-// $(document).on("DOMMouseScroll", function (e) {
-//   if (i == 10) {
-//     $(".discount").addClass("active");
-//     i++;
-//   }
-// });
-// $(document).on("touchmove", function () {
-//   if (i == 10) {
-//     $(".discount").addClass("active");
-//     i++;
-//   }
-// });
 
-// $(document).on("click", ".discount a", function (e) {
-//   e.preventDefault();
-//   console.log("click");
-//   $(this).parent().removeClass("active");
-// });
-// });
+function toggle(){
+  let x = document.getElementById("navigation");
+  let y = document.getElementById("icon-bar");
+  if (x.className === "nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "nav";
+  }
+
+}
