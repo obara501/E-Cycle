@@ -21,8 +21,7 @@ if (!isset($_SESSION['username'])) {
     <!-- LINK TO FONT LIBRARY-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <!-- LINK TO ICONS LIBRARY -->
     <script src="https://kit.fontawesome.com/53f3b15eb1.js" crossorigin="anonymous"></script>
     <!-- LINK TO SLIDER -->
@@ -36,17 +35,19 @@ if (!isset($_SESSION['username'])) {
             <img src="../assets/backgrounds/bg_e-cycle.jpg" class="header__background--image" alt="" />
         </div>
         <div class="header__nav">
-            <div class="header__nav-logo-box">
-                <h2 class="heading-secondary logo-text">
-                    <span class="logo-text--bage">E</span>-Cycle
-                </h2>
-            </div>
+            <a href="../home.php">
+                <div class="header__nav-logo-box">
+                    <h2 class="heading-secondary logo-text">
+                        <span class="logo-text--bage">E</span>-Cycle
+                    </h2>
+                </div>
+            </a>
             <nav class="header__nav-links">
                 <li class="header__nav-link"><a href="../home.php/#about" class="">About</a></li>
                 <li class="header__nav-link"><a href="../home.php/#testimonials" class="">Testimonials</a></li>
                 <li class="header__nav-link"><a href="../home.php/#contact" class="">Contact</a></li>
                 <li class="header__nav-link" id="header__signup">
-                    <a href="profile.php">
+                    <a href="../profile.php">
                         <?php if (isset($_SESSION['username'])) : ?>
                             <h3 class="btn btn-grey"><?php echo $_SESSION['username']; ?></h3>
                         <?php endif ?>
@@ -81,7 +82,7 @@ if (!isset($_SESSION['username'])) {
                     <div class="product-left">
                         <div class="product-left-inner">
                             <h1 style="padding-bottom: 20px; color: #405e76;">Specialized Turbo Vado SL Equipped</h1>
-                            <h2 >There's no other e-bike out there with ride quality, range, and power like this, at a weight that's light enough to carry. The Turbo Vado SL 5.0 EQ is best for your daily commute, quick errands and getting around town</h2>
+                            <h2>There's no other e-bike out there with ride quality, range, and power like this, at a weight that's light enough to carry. The Turbo Vado SL 5.0 EQ is best for your daily commute, quick errands and getting around town</h2>
                             <h2 style="color: #405e76;">$6,000</h2>
                             <h2 style="color: rgb(33, 146, 33);">In Stock</h2>
                             <button class="btn btn-grey" style="width: 100%;">Buy</button>
