@@ -1,0 +1,77 @@
+.testimony {
+
+    border-radius: 1rem;
+    @include flex-row;
+    align-items: center;
+    padding: 3rem;
+    background-color: $secondary-color;
+    box-shadow: 0 .4rem 3rem rgba(0, 0, 0, 0.25);
+    transition: all 1s;
+    position: relative;
+
+    &::before,
+    &::after {
+        position: absolute;
+        font-size: 10rem;
+        color: $color-white;
+        z-index: 1;
+    }
+
+    &::before {
+        content: "\275D";
+        top: -30%;
+        left: 0;
+    }
+
+    &::after {
+        content: "\275E";
+        right: 0;
+        bottom: -46%;
+    }
+
+    &__image {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 50%;
+        margin-right: 2rem;
+        clip-path: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        @include flex-center;
+
+
+        img{
+            height: 100%;
+            transform : scale(1.4);
+            transition: all .3s;
+            backface-visibility: hidden;
+
+        }
+    }
+    &:hover &__image img{
+        transform: scale(1);
+
+    }
+
+    &__content {
+        text-align: left;
+        border-left: 1px solid $primary-color;
+        padding-left: 2rem;
+        p {
+            width: 45rem;
+            color: $primary-color;
+        }
+
+        h4 {
+            text-align: right;
+            margin-top: 3rem;
+            opacity: .9;
+            color: $primary-color;
+            font-style: oblique;
+
+            span {
+                display: block;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

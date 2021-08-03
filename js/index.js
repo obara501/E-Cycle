@@ -1,3 +1,4 @@
+'use strict';
 // SHOP SLIDER
 document.addEventListener("DOMContentLoaded", function () {
   new Splide(".splide", {
@@ -14,27 +15,14 @@ for (let i = 0, len = elms.length; i < len; i++) {
   new Splide(elms[i]).mount();
 }
 
-// TESTIMONY SLIDER
-document.addEventListener("DOMContentLoaded", function () {
-  new Splide("#splide", {
-    type: "loop",
-    padding: {
-      right: "5rem",
-      left: "5rem",
-    },
-    gap: '2rem',
-    autoplay: true,
-    arrows: "slider",
-    perPage: 2,
-    perMove: 1,
-    pauseOnHover: true,
-    lazyLoad: true,
-    focus    : 'center',
-    trimSpace: false,
-  }).mount();
-});
 
-let slides = document.getElementsByClassName("splide__slide");
-for (let i = 0, len = slides.length; i < len; i++) {
-  new Splide(slides[i]).mount();
+function toggle(){
+  let x = document.getElementById("navigation");
+  let y = document.getElementById("icon-bar");
+  if (x.className === "nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "nav";
+  }
+
 }

@@ -1,0 +1,24 @@
+.discount{
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    text-align: center;
+    background-color: $primary-color;
+    padding: 5rem;
+    display: none;
+    @include flex-center;
+    // position: fixed;
+    // visibility: hidden;
+    // opacity: 0;
+
+    &__heading{
+        margin-bottom: 1rem;
+    }
+    &__text{
+        width: 70%;
+        color: $secondary-color;
+        span{
+            color: $color-white;
+        }
+    }
+}
