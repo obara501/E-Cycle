@@ -1,3 +1,4 @@
+'use strict';
 // SHOP SLIDER
 document.addEventListener("DOMContentLoaded", function () {
   new Splide(".splide", {
@@ -14,27 +15,32 @@ for (let i = 0, len = elms.length; i < len; i++) {
   new Splide(elms[i]).mount();
 }
 
-// TESTIMONY SLIDER
-document.addEventListener("DOMContentLoaded", function () {
-  new Splide("#splide", {
-    type: "loop",
-    padding: {
-      right: "5rem",
-      left: "5rem",
-    },
-    gap: '2rem',
-    autoplay: true,
-    arrows: "slider",
-    perPage: 2,
-    perMove: 1,
-    pauseOnHover: true,
-    lazyLoad: true,
-    focus    : 'center',
-    trimSpace: false,
-  }).mount();
-});
+/* DISCOUNT POPUP  */
+// $(document).ready(function() {
+// let i = 0;
+// $(document).on("mousewheel", function (e) {
+//   i++;
+//   console.log(i);
+//   if (i == 10) {
+//     $(".discount").addClass("active");
+//   }
+// });
+// $(document).on("DOMMouseScroll", function (e) {
+//   if (i == 10) {
+//     $(".discount").addClass("active");
+//     i++;
+//   }
+// });
+// $(document).on("touchmove", function () {
+//   if (i == 10) {
+//     $(".discount").addClass("active");
+//     i++;
+//   }
+// });
 
-let slides = document.getElementsByClassName("splide__slide");
-for (let i = 0, len = slides.length; i < len; i++) {
-  new Splide(slides[i]).mount();
-}
+// $(document).on("click", ".discount a", function (e) {
+//   e.preventDefault();
+//   console.log("click");
+//   $(this).parent().removeClass("active");
+// });
+// });

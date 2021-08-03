@@ -18,6 +18,7 @@ body {
   line-height: 1.7;
   color: #777;
   box-sizing: border-box;
+  position: relative;
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
@@ -125,6 +126,29 @@ a.link:hover {
 
 .u-padding-bottom-small {
   padding-bottom: 3rem !important;
+}
+
+.discount {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 1rem;
+  text-align: center;
+  background-color: #405E76;
+  padding: 5rem;
+  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.discount__heading {
+  margin-bottom: 1rem;
+}
+.discount__text {
+  width: 70%;
+  color: #DFC47F;
+}
+.discount__text span {
+  color: #fff;
 }
 
 .testimony {
@@ -424,6 +448,11 @@ a.link:hover {
   width: 70rem;
 }
 
+/*****  MAIN SECTION *****/
+.section-main {
+  position: relative;
+}
+
 /*****  ABOUT SECTION *****/
 .section-about {
   min-height: 70vh;
@@ -609,6 +638,22 @@ a.link:hover {
 }
 .section-shop .slideshow .btn-shop:hover {
   border-bottom: 2px solid #DFC47F;
+}
+
+/*****  DISCOUNT SECTION - MOBILE*****/
+.section-discount {
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.section-discount__container {
+  width: 90rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 /*****  TESTIMONIALS SECTION *****/
@@ -897,12 +942,29 @@ a.link:hover {
 
   /* TESTIMONIALS SECTION MEDIA QUERY*/
   /* CONTACT SECTION MEDIA QUERY*/
+  .section-contact {
+    padding: 10rem;
+  }
+
   /* FOOTER SECTION MEDIA QUERY*/
 }
 /*****  TABLET MEDIA QUERIES *****/
 @media (max-width: 48em) {
   html {
     font-size: 30%;
+  }
+
+  .section-discount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+  .section-discount .discount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   /* HEADER SECTION MEDIA QUERY*/
