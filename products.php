@@ -35,7 +35,7 @@ if (!isset($_SESSION['username'])) {
             <img src="./assets/backgrounds/bg_e-cycle.jpg" class="header__background--image" alt="" />
         </div>
         <div class="header__nav">
-            <a href="home.html">
+            <a href="home.php">
                 <div class="header__nav-logo-box">
                     <h2 class="heading-secondary logo-text">
                         <span class="logo-text--bage">E</span>-Cycle
@@ -76,7 +76,7 @@ if (!isset($_SESSION['username'])) {
                     <!--PRODUCT ITEMS-->
 
                     <div class="product-item">
-                        <a href="./showproducts/bike1.html">
+                        <a href="./showproducts/bike1.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -92,7 +92,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike2.html">
+                        <a href="./showproducts/bike2.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -108,7 +108,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike3.html">
+                        <a href="./showproducts/bike3.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -124,7 +124,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike4.html">
+                        <a href="./showproducts/bike4.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -140,7 +140,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike5.html">
+                        <a href="./showproducts/bike5.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -156,7 +156,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike6.html">
+                        <a href="./showproducts/bike6.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -172,7 +172,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike1.html">
+                        <a href="./showproducts/bike1.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -188,7 +188,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike1.html">
+                        <a href="./showproducts/bike1.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -204,7 +204,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike1.html">
+                        <a href="./showproducts/bike1.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -248,7 +248,7 @@ if (!isset($_SESSION['username'])) {
                 </div>
                 <div class="footer-nav">
                     <h3 class="footer-heading heading-tertiary u-margin-bottom-small">Navigate</h3>
-                    <a href="#shop" class="link">Shop</a>
+                    <a href="./products.php" class="link">Shop</a>
                     <a href="#about" class="link">About</a>
                     <a href="#contact" class="link">Contact</a>
                     <a href="#testimonials" class="link">Testimonials</a>
