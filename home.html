@@ -44,7 +44,7 @@
             <span class="logo-text--bage">E</span>-Cycle
           </h2>
         </div>
-        <nav class="header__nav-links">
+        <nav class="header__nav-links nav" id="navigation">
           <li class="header__nav-link">
             <a href="#about" class="nav-ltr">About</a>
           </li>
@@ -55,8 +55,8 @@
           <li class="header__nav-link ">
             <a href="#contact" class="nav-ltr">Contact</a>
           </li>
-          <li class="header__nav-link">
-            <a href="login.php" class="nav-ltr">Login</a>
+          <li class="header__nav-link login">
+            <a href="login.php" class="nav-ltr ">Login</a>
           </li>
           <li class="header__nav-link" id="header__signup">
             <a href="register.php" class="btn btn-grey">Sign up</a>
@@ -70,6 +70,9 @@
               </p>
             </div>
           </li>
+          <a href="javascript:void(0)" class="icon" onclick="toggle()">
+            <i class="fa fa-bars" id="icon-bar"></i>
+          </a>
         </nav>
       </div>
       <div class="header__content">
