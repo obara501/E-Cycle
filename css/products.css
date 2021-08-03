@@ -17,8 +17,10 @@
 /*Media Queries*/
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
-    .grid{flex-direction: row;}
+    .grid{flex-direction: column;}
     .product-item{width: 100%;}
+    .product-right{width: 100%;}
+    .product-left{width: 100%;}
 }
 @media (min-device-width: 800px) and (max-device-width: 1280px){
     .grid{flex-direction: row;}
