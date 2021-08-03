@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/faq.css">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+	<title>FAQ Section</title>
+</head>
+<body>
+
+	<div>
+
+	<h1>Frequently Asked Questions(FAQs)</h1>
+	<div class="container">
+		<div class="acc">
+			<h3>Q1:How long will it take to receive my order? </h3>
+			<div class="content">
+				<div class="content-inner">
+					<p>Orders placed Monday through Friday (excluding holidays) will be processed and delivered within 2-5 business days once payment has been authorized and verification obtained. Orders placed on Saturdays and Sundays will begin processing the following business day. All customers will receive a confirmation email for the delivery process.</p>
+				</div>
+			</div>
+		</div>
+		<div class="acc">
+			<h3>Q2:What types of payments do you accept?</h3>
+			<div class="content">
+				<div class="content-inner">
+					<p>We accept all major credit cards including Visa and Mastercard and also M-Pesa mobile payment.</p>
+				</div>
+			</div>
+		</div>
+		<div class="acc">
+			<h3>Q3:What is your return policy? </h3>
+			<div class="content">
+				<div class="content-inner">
+					<p>We want you to be 100% satisfied with your order. If you are not completely in love with your purchase, you are welcome to return it to us within 30 days of the delivery date for an exchange or refund.</p>
+				</div>
+			</div>
+		</div>
+		<div class="acc">
+			<h3>Q4:How long will it take to process my return/exchange?</h3>
+			<div class="content">
+				<div class="content-inner">
+					<p>Please allow up to 15 business days for your return to be processed. Business days are Monday-Friday except for holidays. Return processing begins after your package is delivered to us.</p>
+				</div>
+			</div>
+		</div>
+		<div class="acc">
+			<h3>Q5:Can your products be accessed in other countries?</h3>
+			<div class="content">
+				<div class="content-inner">
+					<p>We regret to inform you that our stores are only Kenyan-based but we are looking forward to expand once the right opportunity presents itself. </p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form action="faq.php" method="POST">
+		<div class="inputBox">
+		<input  id="return" type="submit" value="Back">
+		</div>
+		<div class="subBox">
+		<input name="send" type="submit" value="Finish Submission">
+		</div>
+    
+    </form>
+
+</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+     $('.acc h3').click(function(){
+       $(this).next('.content').slideToggle();
+       $(this).parent().toggleClass('active');
+       $(this).parent().siblings().children('.content').slideUp();
+       $(this).parent().siblings().removeClass('active');
+   });
+});
+
+	document.getElementById("return").onclick = function () {
+        location.href = "home.php";}
+
+    
+    
+
+</script>
+	
+
+</body>
+</html>

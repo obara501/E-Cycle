@@ -1,0 +1,89 @@
+body{
+	background: url("assets/images/faq.jpg");
+    background-position: center;
+    background-size: cover;
+}
+h1{
+	text-align:center;
+	font-family: 'Oswald',sans-serif;
+	font-size: 50px;
+	margin: 50px 0 0;
+	color: #405E76 ;
+
+}
+
+.container{
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 70px 0 20px;
+	width: 100%;
+
+}
+.acc{
+	border-bottom: 1px solid #fff;
+}
+.acc h3{
+	font-size: 25px;
+	background-color:#DFC47F;
+	color: #405E76 ;
+	padding: 15px;
+	margin: 0;
+	cursor: pointer;
+	font-family: 'Oswald',sans-serif;
+	letter-spacing: 2px;
+	position: relative;
+
+}
+.acc h3:after{
+	content:'+';
+	position: absolute;
+	right: 20px;
+	font-size: 40px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.acc.active h3:after{
+	content: '-';
+}
+.content{
+	background-color: #B2BEB5;
+	display: none;
+
+}
+.content *{
+	margin-top: 0;
+	line-height: 1.5;
+}
+.content-inner{
+  padding:15px;
+}
+
+
+.inputBox input[type="submit"]
+{
+	margin: 10px;
+	background: #405E76;
+	float: left;
+	display: inline;
+	border-radius: 2px;
+	
+
+
+
+	border: none;
+	cursor: pointer;
+	padding: 15px 10px;
+}
+
+.subBox input[type="submit"]
+{
+	margin: 10px;
+	background: #405E76;
+	float: right;
+	display: inline;
+	border-radius: 2px;
+	
+	border: none;
+	cursor: pointer;
+	padding: 15px 10px;
+}
