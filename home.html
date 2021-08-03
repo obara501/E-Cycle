@@ -394,14 +394,14 @@
                 Toss us a message
               </h2>
             </div>
-            <form class="section-contact__form" action="#" method="post">
+            <form class="section-contact__form" action="contact.php" method="POST">
               <div class="section-contact__form--name">
                 <label class="section-contact__form--label" for="name"
                   >Name</label
                 >
                 <input
                   type="text"
-                  name="name"
+                  name="fname"
                   id="name"
                   placeholder="e.g. Jane Doe"
                   required
@@ -431,7 +431,7 @@
                   placeholder="say something..."
                 ></textarea>
               </div>
-              <input class="btn btn-grey" type="submit" value="Send" />
+              <input class="btn btn-grey" type="submit" name="Submit" value="Send" />
             </form>
           </div>
           <div class="center">
