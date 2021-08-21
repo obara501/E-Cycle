@@ -111,7 +111,6 @@ if (isset($_POST['signup'])) {
 
     	//track logged in users using sessions NB:include session_start at the top of the file
     	$_SESSION['username'] =$username;
-    	$_SESSION['success'] ="You are now logged in";
     	header('location: home.php');
 
     }
@@ -147,5 +146,37 @@ if (count($errors) == 0) {
   }
 
 }
+//edit profile
+if(isset($_POST['save-edit']))
+  {
+    //
+    $pid=$_SESSION['username'];
+    $fname=$_POST['fullname'];
+    $username=$_POST['username'];
+    $email=$_POST['email'];
+    $dob=$_POST['dob'];
+    $postcode=$_POST['postcode'];
+    $adress=$_POST['adress'];
+    $update_query="UPDATE customer set fname='$fname',  username='$username',  email='$email', dob='$dob', postcode='$postcode', adress='$adress' WHERE username='$pid'";
+    $result= mysqli_query($connection,$update_query);
+    if ($result) {
+    $msg="Your profile has been updated.";
+    echo $msg;
+    header('location:login.php');
+  }
+  else
+    {
+      $msg="Something Went Wrong. Please try again.".mysqli_error();
+      echo $msg;
+    }
+}
+  //Logout
+  //Using _GET to check if user has loged out(collect data from  URL)
+  if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header('location: home.html');
+  }
  
 ?>
+

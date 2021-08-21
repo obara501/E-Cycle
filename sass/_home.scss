@@ -104,12 +104,12 @@
             }
         }
 
-        .nav{
-            .icon{
+        .nav {
+            .icon {
                 display: none;
             }
         }
-        
+
     }
 
     &__content {
@@ -122,7 +122,7 @@
 }
 
 /*****  MAIN SECTION *****/
-.section-main{
+.section-main {
     position: relative;
 }
 
@@ -747,9 +747,10 @@
     /* TESTIMONIALS SECTION MEDIA QUERY*/
     /* CONTACT SECTION MEDIA QUERY*/
 
-    .section-contact{
+    .section-contact {
         padding: 10rem;
     }
+
     /* FOOTER SECTION MEDIA QUERY*/
 
 
@@ -764,10 +765,11 @@
         font-size: 30%;
     }
 
-    .section-discount{
+    .section-discount {
         @include flex-center;
         margin-bottom: 5rem;
-        .discount{
+
+        .discount {
             @include flex-center;
             flex-direction: column;
         }
@@ -780,6 +782,74 @@
 
         .banner {
             display: none;
+        }
+
+        .nav {
+            @include flex-row;
+            list-style-type: none;
+            padding: 2rem 3rem 0 0;
+            justify-content: center;
+            align-items: center;
+
+            &>* {
+                display: none;
+            }
+
+            #header__signup {
+                margin: 0;
+            }
+
+            #header__signup,
+            .login {}
+
+            .icon {
+                display: block;
+                margin-right: 5rem;
+                font-size: 3.5rem;
+
+                &:active .header__content {
+                    padding-bottom: 10rem;
+                }
+            }
+
+            &.responsive {
+
+
+                position: relative;
+                width: 50%;
+                margin-bottom: -40rem;
+                @include flex-column;
+                align-items: flex-start;
+                border-radius: .5rem;
+                background-color: $secondary-color;
+                overflow: hidden;
+
+                &>* {
+                    display: block;
+                }
+
+                li {
+
+                    list-style-type: none;
+                    padding: 3rem !important;
+
+                    width: 100%;
+
+                    align-items: center;
+                    justify-content: flex-start;
+                    text-align: center;
+
+                    #header__signup {
+                        margin: 0;
+                    }
+                }
+
+                a.icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
         }
     }
 
@@ -872,46 +942,63 @@
     /* HEADER SECTION MEDIA QUERY*/
 
     .header {
-        min-height: 70vh;
+        min-height: 60vh;
 
         &__nav {
             padding-right: 0;
         }
-        &__content{
+
+        &__content {
             // padding-bottom: 10rem;
             // padding-top: 0;
         }
-        .nav{
-            & > *:not(.icon,#header__signup,.login){
+
+        .nav {
+            @include flex-row;
+            list-style-type: none;
+            padding-top: 2rem;
+            justify-content: center;
+            align-items: center;
+
+            &>*:not(.icon, #header__signup, .login) {
                 display: none;
             }
-            #header__signup{
-                margin:0 5rem 0 1.5rem;
+
+            #header__signup {
+                margin: 0 5rem 0 1.5rem;
             }
-            .icon{
+
+            #header__signup,
+            .login {}
+
+            .icon {
                 display: block;
                 margin-right: 5rem;
-                font-size:3.5rem;
-                &:active .header__content{
+                font-size: 3.5rem;
+
+                &:active .header__content {
                     padding-bottom: 10rem;
                 }
             }
-            &.responsive{
+
+            &.responsive {
 
 
                 position: relative;
-                width:50%;
+                width: 50%;
                 // height: 100%;
                 margin-bottom: -40rem;
                 @include flex-column;
                 align-items: flex-start;
                 border-radius: .5rem;
-                background-color: $color-white;
+                background-color: $secondary-color;
                 overflow: hidden;
-                & > *:not(.icon,#header__signup,.login){
+
+                &>*:not(.icon, #header__signup, .login) {
                     display: block;
                 }
-                li{
+
+                li {
 
                     list-style-type: none;
                     padding: 3rem !important;
@@ -921,11 +1008,13 @@
                     align-items: center;
                     justify-content: flex-start;
                     text-align: center;
-                #header__signup{
-                    margin:0;
+
+                    #header__signup {
+                        margin: 0;
+                    }
                 }
-                }
-                a.icon{
+
+                a.icon {
                     position: absolute;
                     right: 0;
                     top: 0;
@@ -936,19 +1025,21 @@
 
     /* ABOUT SECTION MEDIA QUERY*/
     .section-about {
-        min-height: 45vh;
+        min-height: 41vh;
 
         &--wrapper {
             padding-bottom: 10rem;
+            padding: 5rem 0rem 0 10rem;
         }
 
         &__content {
             padding: 5rem;
+            padding-left: 5rem;
             padding-top: 0;
         }
 
         &__img {
-            height: 40vh;
+            height: 30vh;
         }
 
         &__svg {
@@ -1132,5 +1223,42 @@
         .follow-us {
             padding: 0;
         }
+    }
+}
+
+@media (max-width: 25em) {
+    html {
+        font-size: 20%;
+    }
+
+    .header {
+        min-height: 40vh;
+    }
+
+    .section-about {
+
+        &__img {
+            height: 25vh;
+        }
+
+        &--wrapper {
+            padding: 10rem 5rem 0 5rem;
+        }
+    }
+
+    .section-shop {
+        min-height: 42vh;
+    }
+
+    .section-discount {
+        min-height: 25vh;
+    }
+
+    .section-testimonials {
+        min-height: 73vh;
+    }
+
+    .section-ride--wrapper {
+        margin-top: -12rem;
     }
 }

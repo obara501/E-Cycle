@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +12,8 @@ session_start();
     <!-- LINK TO FONT LIBRARY-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
     <!-- LINK TO ICONS LIBRARY -->
     <script src="https://kit.fontawesome.com/53f3b15eb1.js" crossorigin="anonymous"></script>
     <!-- LINK TO SLIDER -->
@@ -25,24 +23,35 @@ session_start();
 
 <body>
     <header>
-        <div class="header__nav">
-            <a href="../home.php">
-                <div class="header__nav-logo-box">
-                    <h2 class="heading-secondary logo-text">
-                        <span class="logo-text--bage">E</span>-Cycle
-                    </h2>
-                </div>
-            </a>
-            <nav class="header__nav-links">
-                <li class="header__nav-link" id="header__signup">
-                    <a href="../profile.php">
-                        <?php if (isset($_SESSION['username'])) : ?>
-                            <h3 class="btn btn-grey"><?php echo $_SESSION['username']; ?></h3>
-                        <?php endif ?>
-                    </a>
-                </li>
-            </nav>
+      <div class="header__nav">
+        <div class="header__nav-logo-box">
+          <a href="home.html">
+            <h2 class="heading-secondary logo-text">
+                <span class="logo-text--bage">E</span>-Cycle
+            </h2>
+          </a>  
         </div>
+        <nav class="header__nav-links nav" id="navigation">
+          <li class="header__nav-link login">
+            <a href="login.php" class="nav-ltr ">Login</a>
+          </li>
+          <li class="header__nav-link" id="header__signup">
+            <a href="register.php" class="btn btn-grey">Sign up</a>
+            <div class="banner">
+              <h4 class="heading-tertiary banner--heading">
+                NEW MEMBER DISCOUNT!
+              </h4>
+              <p class="paragraph banner--text">
+                Get <span>15% off</span> your first order when you sign up and
+                purchase an E-Cycle
+              </p>
+            </div>
+          </li>
+          <a href="javascript:void(0)" class="icon" onclick="toggle()">
+            <i class="fa fa-bars" id="icon-bar"></i>
+          </a>
+        </nav>
+      </div>
     </header>
 
     <main class="section-main">
@@ -53,7 +62,7 @@ session_start();
                         <div class="item">
                             <div class="product-inner">
                                 <div class="product-thumb">
-                                    <img src="../assets/images/bike04.jpg" alt="">
+                                    <img src="../assets/images/bike01.jpg" alt="">
                                 </div>
                             </div>
                         </div>

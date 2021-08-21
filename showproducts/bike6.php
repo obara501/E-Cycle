@@ -1,12 +1,6 @@
 <?php
 session_start();
-//Checking if the user is already logged in
-if (!isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "You must log in first";
-    header('location: register.php');
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,10 +24,7 @@ if (!isset($_SESSION['username'])) {
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__background">
-            <img src="../assets/backgrounds/bg_e-cycle.jpg" class="header__background--image" alt="" />
-        </div>
+    <header>
         <div class="header__nav">
             <a href="../home.php">
                 <div class="header__nav-logo-box">
@@ -43,9 +34,6 @@ if (!isset($_SESSION['username'])) {
                 </div>
             </a>
             <nav class="header__nav-links">
-                <li class="header__nav-link"><a href="../home.php/#about" class="">About</a></li>
-                <li class="header__nav-link"><a href="../home.php/#testimonials" class="">Testimonials</a></li>
-                <li class="header__nav-link"><a href="../home.php/#contact" class="">Contact</a></li>
                 <li class="header__nav-link" id="header__signup">
                     <a href="../profile.php">
                         <?php if (isset($_SESSION['username'])) : ?>
@@ -55,15 +43,6 @@ if (!isset($_SESSION['username'])) {
                 </li>
             </nav>
         </div>
-        <!--
-        <div class="header__content">
-            <div class="heading-wrapper">
-                <h1 class="heading-primary heading-primary--white">
-                    Cycling just got easier!
-                </h1>
-            </div>
-        </div>
-        -->
     </header>
 
     <main class="section-main">
