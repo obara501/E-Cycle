@@ -28,7 +28,7 @@ if(!$connection){
 
 
 
-if(isset($_POST['Submit'])) {	
+if(isset($_POST['Send'])) {	
 	$fname = mysqli_real_escape_string($connection, $_POST['fname']);
 	$message = mysqli_real_escape_string($connection, $_POST['message']);
 	$email = mysqli_real_escape_string($connection, $_POST['email']);
