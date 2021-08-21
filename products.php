@@ -30,10 +30,7 @@ if (!isset($_SESSION['username'])) {
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__background">
-            <img src="./assets/backgrounds/bg_e-cycle.jpg" class="header__background--image" alt="" />
-        </div>
+    <header>
         <div class="header__nav">
             <a href="home.php">
                 <div class="header__nav-logo-box">
@@ -43,9 +40,6 @@ if (!isset($_SESSION['username'])) {
                 </div>
             </a>
             <nav class="header__nav-links">
-                <li class="header__nav-link"><a href="#about" class="">About</a></li>
-                <li class="header__nav-link"><a href="#testimonials" class="">Testimonials</a></li>
-                <li class="header__nav-link"><a href="#contact" class="">Contact</a></li>
                 <li class="header__nav-link" id="header__signup">
                     <a href="profile.php">
                         <?php if (isset($_SESSION['username'])) : ?>
@@ -55,15 +49,6 @@ if (!isset($_SESSION['username'])) {
                 </li>
                 
             </nav>
-        </div>
-
-        <div class="header__content">
-            <div class="heading-wrapper">
-                <h1 class="heading-primary heading-primary--white">
-                    Cycling just got easier!
-                </h1>
-            </div>
-            <a href="./products.php" class="btn btn-bage btn-shop">Shop</a>
         </div>
 
     </header>
@@ -76,7 +61,7 @@ if (!isset($_SESSION['username'])) {
                     <!--PRODUCT ITEMS-->
 
                     <div class="product-item">
-                        <a href="./showproducts/bike1.php">
+                        <a href="showproducts/bike1.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -92,7 +77,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike2.php">
+                        <a href="showproducts/bike2.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -108,7 +93,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike3.php">
+                        <a href="showproducts/bike3.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -124,7 +109,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike4.php">
+                        <a href="showproducts/bike4.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -140,7 +125,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike5.php">
+                        <a href="showproducts/bike5.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -156,7 +141,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike6.php">
+                        <a href="showproducts/bike6.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -172,7 +157,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike1.php">
+                        <a href="showproducts/bike7.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -188,7 +173,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike1.php">
+                        <a href="showproducts/bike8.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -204,7 +189,7 @@ if (!isset($_SESSION['username'])) {
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike1.php">
+                        <a href="showproducts/bike9.php">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
