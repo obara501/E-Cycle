@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Cycle</title>
     <!-- LINK  TO STYLESHEET FILE -->
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/products.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/products.css">
     <!-- LINK TO FONT LIBRARY-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,41 +22,36 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__background">
-            <img src="./assets/backgrounds/bg_e-cycle.jpg" class="header__background--image" alt="" />
+    <header>
+      <div class="header__nav">
+        <div class="header__nav-logo-box">
+          <a href="home.html">
+            <h2 class="heading-secondary logo-text">
+                <span class="logo-text--bage">E</span>-Cycle
+            </h2>
+          </a>  
         </div>
-        <div class="header__nav">
-            <a href="home.html">
-                <div class="header__nav-logo-box">
-                    <h2 class="heading-secondary logo-text">
-                        <span class="logo-text--bage">E</span>-Cycle
-                    </h2>
-                </div>
-            </a>
-            <nav class="header__nav-links">
-                <li class="header__nav-link"><a href="#about" class="">About</a></li>
-                <li class="header__nav-link"><a href="#testimonials" class="">Testimonials</a></li>
-                <li class="header__nav-link"><a href="#contact" class="">Contact</a></li>
-                <li class="header__nav-link"><a href="#contact" class="">Login</a></li>
-                <li class="header__nav-link"><a href="#" class="btn btn-grey">Sign up</a>
-                    <div class="banner">
-                        <h4 class="heading-tertiary banner--heading">NEW MEMBER DISCOUNT!</h4>
-                        <p class="paragraph banner--text">Get <span>15% off</span> your first order when you sign up and
-                            purchase an E-Cycle</p>
-                    </div>
-                </li>
-            </nav>
-        </div>
-
-        <div class="header__content">
-            <div class="heading-wrapper">
-                <h1 class="heading-primary heading-primary--white">
-                    Cycling just got easier!
-                </h1>
+        <nav class="header__nav-links nav" id="navigation">
+          <li class="header__nav-link login">
+            <a href="login.php" class="nav-ltr ">Login</a>
+          </li>
+          <li class="header__nav-link" id="header__signup">
+            <a href="register.php" class="btn btn-grey">Sign up</a>
+            <div class="banner">
+              <h4 class="heading-tertiary banner--heading">
+                NEW MEMBER DISCOUNT!
+              </h4>
+              <p class="paragraph banner--text">
+                Get <span>15% off</span> your first order when you sign up and
+                purchase an E-Cycle
+              </p>
             </div>
-        </div>
-
+          </li>
+          <a href="javascript:void(0)" class="icon" onclick="toggle()">
+            <i class="fa fa-bars" id="icon-bar"></i>
+          </a>
+        </nav>
+      </div>
     </header>
 
     <main class="section-main">
@@ -67,7 +62,7 @@
                     <!--PRODUCT ITEMS-->
 
                     <div class="product-item">
-                        <a href="./showproducts/bike1.html">
+                        <a href="showproducts/bike1.html">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -83,7 +78,7 @@
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike2.html">
+                        <a href="showproducts/bike2.html">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -99,7 +94,7 @@
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike3.html">
+                        <a href="showproducts/bike3.html">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -115,7 +110,7 @@
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike4.html">
+                        <a href="showproducts/bike4.html">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -131,7 +126,7 @@
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike5.html">
+                        <a href="showproducts/bike5.html">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -147,7 +142,7 @@
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike6.html">
+                        <a href="showproducts/bike6.html">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -163,7 +158,7 @@
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike1.html">
+                        <a href="showproducts/bike7.html">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -179,7 +174,7 @@
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike1.html">
+                        <a href="showproducts/bike8.html">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
@@ -195,7 +190,7 @@
                     </div>
 
                     <div class="product-item">
-                        <a href="./showproducts/bike1.html">
+                        <a href="showproducts/bike9.html">
                             <div class="item">
                                 <div class="product-inner">
                                     <div class="product-thumb">
