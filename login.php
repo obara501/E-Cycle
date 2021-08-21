@@ -25,7 +25,7 @@
             <?php include('errors.php'); ?>
         	<div class=""> 
                 <div class="form-group">
-                    <input type="text" placeholder="Username" required="" name="username">
+                    <input type="text" placeholder="Username" required="" name="username" >
                 </div>
                 <div class="form-group">
                     <input type="password" placeholder="Password" required="" name="password">
